@@ -11,7 +11,7 @@ services:
       - memovo_volume:/var/lib/postgresql/data
   node:
     container_name: node
-    build: .
+    build: ./memovo-backend
     ports:
       - 4000:4000
     env_file:
