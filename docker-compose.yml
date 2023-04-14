@@ -13,7 +13,7 @@ services:
     container_name: node
     build: .
     ports:
-      - 1234:4000
+      - 4000:4000
     env_file:
       - memovo-backend/.env
     depends_on:
@@ -29,7 +29,7 @@ services:
     container_name: nginx
     build: ./nginx
     ports:
-      - 8080:80
+      - 80:80
     volumes:
       - react-volume:/var/www/html
     depends_on:
