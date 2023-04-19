@@ -1,5 +1,5 @@
 services:
-  db:
+  postgres:
     image: postgres
     container_name: memovo_db
     env_file:
@@ -14,4 +14,4 @@ services:
     env_file:
       - memovo-backend/.env.test
     depends_on:
-      - db
+      - postgres
