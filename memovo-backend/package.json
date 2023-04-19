@@ -11,9 +11,9 @@
     "test:migration-generate": "npx dotenv -e .env.test npx prisma migrate dev --name memovo postgres-init",
     "prisma:seed": "npx prisma db seed",
     "dev:migrate:deploy": "prisma migrate deploy",
-    "test:migrate:deploy": "npx dotenv -e .env.test prisma migrate deploy",
+    "test:migrate:deploy": "npx dotenv -e .env.test prisma migrate deploy && npm run prisma:seed",
     "test": "npx dotenv -e .env.test npx jest -- --runInBand",
-    "test:coverage": "npx dotenv -e .env.test npx jest -- --runInBand --coverage",
+    "test:coverage": "npm test:migrate:deploy && npx dotenv -e .env.test npx jest -- --runInBand --coverage",
     "test:prisma:seed": "npx dotenv -e .env.test npx prisma db seed"
   },
   "prisma": {
