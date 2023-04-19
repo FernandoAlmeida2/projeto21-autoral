@@ -33,7 +33,7 @@ services:
     volumes:
       - react-volume:/var/www/html
     depends_on:
-      - db
+      - postgres
       - node
       - react
 
