@@ -1,7 +1,7 @@
 services:
   postgres:
     image: postgres
-    container_name: memovo_db
+    container_name: postgres
     env_file:
       - memovo-backend/.env.test
     ports:
