@@ -19,7 +19,6 @@ export default function App() {
 }
 
 const AppContainer = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap");
 
   * {
     font-family: "Josefin Sans", sans-serif;

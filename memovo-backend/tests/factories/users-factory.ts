@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker";
 
-export async function createValidBody() {
+export function createValidBody() {
   const password = faker.internet.password(15, false, /^[a-zA-Z0-9]*$/);
   return {
     name: faker.name.firstName(),
@@ -10,7 +10,7 @@ export async function createValidBody() {
   };
 }
 
-export async function createInvalidBody(field: string) {
+export function createInvalidBody(field: string) {
   const password = faker.internet.password(15, false, /^[a-zA-Z0-9]*$/);
   if (field === "email") {
     return {
