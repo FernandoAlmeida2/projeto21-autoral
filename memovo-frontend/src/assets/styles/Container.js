@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import coverImg from "../images/cover.jpg";
 export const Container = styled.div`
-  background-image: url(${coverImg});
+  /* background-image: url(${coverImg}); */
   background-color: #b52022;
   background-position: center;
   background-repeat: no-repeat;
