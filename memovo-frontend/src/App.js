@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { BrowserRouter } from "react-router-dom";
-import styled from "styled-components";
 import ResetStyle from "./assets/styles/Reset";
 import UserContext from "./contexts/UserContext";
 import PrivateRoutes from "./routes/PrivateRoutes";
@@ -11,18 +10,9 @@ export default function App() {
   return (
     <>
       <ResetStyle />
-      <AppContainer>
-        <BrowserRouter>
-          {userData ? <PrivateRoutes /> : <PublicRoutes />}
-        </BrowserRouter>
-      </AppContainer>
+      <BrowserRouter>
+        {userData ? <PrivateRoutes /> : <PublicRoutes />}
+      </BrowserRouter>
     </>
   );
 }
-
-const AppContainer = styled.div`
-  * {
-    font-family: "Josefin Sans", sans-serif;
-    box-sizing: border-box;
-  }
-`;
